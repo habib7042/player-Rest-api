@@ -12,7 +12,7 @@ app.use(BodyParser.json())
 app.use('/api', router)
 //Error Handler
 app.use(function (err, req, res, next) {
-    console.log(err);
+    res.send({ error: err._message })
 })
 
 app.listen(process.env.PORT || 3000, () => {
