@@ -6,6 +6,8 @@ const router = require('./routers/api')
 const app = express()
 //MongoDB connection
 mongoose.connect(process.env.DB_URL)
+//
+app.use(express.static('public'))
 //BodyParser
 app.use(BodyParser.json())
 //Router
