@@ -30,7 +30,17 @@
     <script type="text/babel">
       const Player = React.createClass({
         render: function () {
-          return <div> Return Player </div>;
+          return (
+            <div id="player-container">
+              <form>
+                <label>Enter Log</label>
+                <input type="text" ref="lng" placeholder="Type the number" />
+                <label>Enter Lat</label>
+                <input type="text" ref="lat" placeholder="Type the number" />
+                <input type="submit" value="Find Player" />
+              </form>
+            </div>
+          );
         },
       });
       ReactDOM.render(<Player />, document.getElementById("root"));
